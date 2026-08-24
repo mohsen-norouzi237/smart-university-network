@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modern NOC Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333333;
+            margin: 0;
+            padding: 30px 20px;
+        }
+        
+        .hud-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 16px;
+            padding: 25px 30px;
+            border: 1px solid #e1e4e8;
+            border-bottom: 4px solid #d1d5db; 
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #f0f2f5;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: #2563eb;
+            font-size: 26px;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+
+        .timestamp {
+            font-size: 13px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 15px;
+            border-left: 6px solid #d1d5db;
+        }
+
+        .card.up { border-left-color: #10b981; }
+        .card.down { border-left-color: #ef4444; }
+        .card.wait { border-left-color: #f59e0b; }
+
+        .service-info {
+            float: left;
+            font-size: 17px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-top: 4px;
+        }
+        
+        .service-icon {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .status-badge {
+            float: right;
+            font-weight: bold;
+            font-size: 13px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            color: #ffffff;
+            background-color: #6b7280;
+        }
+
+        .up .status-badge { background-color: #10b981; }
+        .down .status-badge { background-color: #ef4444; }
+        .wait .status-badge { background-color: #f59e0b; color: #ffffff; }
+
+        .summary-box {
+            background-color: #f9fafb;
+            padding: 18px;
+            margin-top: 25px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .summary-box.up { color: #065f46; background-color: #d1fae5; border-color: #a7f3d0; }
+        .summary-box.down { color: #991b1b; background-color: #fee2e2; border-color: #fecaca; }
+        .summary-box.wait { color: #92400e; background-color: #fef3c7; border-color: #fde68a; }
+
+        .btn-refresh {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            background-color: #2563eb;
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <div class="hud-container">
+        <div class="header">
+            <h1>🌐 Network Operations</h1>
+            <div class="timestamp" id="last-updated">Initializing Systems...</div>
+        </div>
+        
+        <div id="list"></div>
+        
+        <div id="summary" class="summary-box wait">
+            Status: Awaiting Data...
+        </div>
+        
+        <button class="btn-refresh" onclick="guiEvent('refresh', {})">
+            ↻ Refresh Dashboard
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

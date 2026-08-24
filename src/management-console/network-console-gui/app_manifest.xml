@@ -1,0 +1,19 @@
+<application>
+    <id>local.university.network_console</id>
+    <version>3.0</version>
+    <name>Network Console Pro</name>
+    <description>Advanced Network Management Console</description>
+    <author>Mohsen Norouzi</author>
+    <contact/>
+    <gui>
+        <name>Console</name>
+        <html>main.html</html>
+        <icon>icon.png</icon>
+        <background>true</background>
+    </gui>
+    <auto-install>
+        <device>SBC</device>
+        <device>PC</device>
+        <device>Laptop</device>
+    </auto-install>
+</application>

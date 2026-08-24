@@ -1,0 +1,19 @@
+<application>
+    <id>local.university.noc_dashboard</id>
+    <version>2.0</version>
+    <name>NOC Dashboard Pro</name>
+    <description>Modern NOC monitoring dashboard for university network</description>
+    <author>Mohsen Norouzi</author>
+    <contact/>
+    <gui>
+        <name>NOC Dashboard</name>
+        <html>main.html</html>
+        <icon>icon.png</icon>
+        <background>true</background>
+    </gui>
+    <auto-install>
+        <device>PC</device>
+        <device>Laptop</device>
+        <device>SBC</device>
+    </auto-install>
+</application>
