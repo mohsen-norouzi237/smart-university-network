@@ -71,7 +71,6 @@
 ├─ README.fa.md                             # فارسی (این فایل)
 ├─ docs/
 │  ├─ report.pdf                            # گزارش کامل پروژه (PDF)
-│  ├─ report.docx                           # گزارش کامل پروژه (Word)
 │  └─ images/                               # تصاویر مستندات
 └─ src/
    ├─ management-console/
