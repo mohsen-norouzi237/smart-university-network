@@ -71,7 +71,6 @@ An IoT controller (`disaster-recovery-controller.py`) that reacts to emergencies
 ├─ README.fa.md                             # Persian
 ├─ docs/
 │  ├─ report.pdf                            # Full project report (PDF)
-│  ├─ report.docx                           # Full project report (Word)
 │  └─ images/                               # Screenshots used in the docs
 └─ src/
    ├─ management-console/
